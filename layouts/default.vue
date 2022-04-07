@@ -1,11 +1,9 @@
 <template>
   <div id="name">
-    상품 페이지
-    <ul>
-      <li>상품1</li>
-      <li>상품2</li>
-      <li>상품3</li>
-    </ul>
+    <h1>{{ $route.name }} page</h1>
+    <NuxtLink to="/">홈페이지</NuxtLink>
+    <NuxtLink to="/main">메인</NuxtLink>
+    <NuxtLink to="/product">상품</NuxtLink>
   </div>
 </template>
 

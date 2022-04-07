@@ -6,6 +6,7 @@
 4/4 nuxt.js install 및 프로젝트 폴더 구조에 대해
 4/6 페이지 컴포넌트 결과 에러페이지 정의
 자동으로 페이지컴포넌트 라우터경로가 생기지않음 (npm run dev를 한 후에 생김)
+4/7 nuxt 라우팅 관련 레이아웃 컴포넌트 nuxt-link 태그
 
 1. https://hjycoinfe.tistory.com/5 (Nuxt.js 개념)
 2. https://hjycoinfe.tistory.com/6 (CSR,SSR)
