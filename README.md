@@ -14,7 +14,9 @@
 
 4/7 nuxt 라우팅 관련 레이아웃 컴포넌트 nuxt-link 태그
 
-4/8 backend install, json server
+4/8 backend install, json server,axios
+
+layouts 폴더에 오류가있음 해결필요
 
 1. https://hjycoinfe.tistory.com/5 (Nuxt.js 개념)
 2. https://hjycoinfe.tistory.com/6 (CSR,SSR)
