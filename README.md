@@ -18,6 +18,8 @@
 
 layouts 폴더에 오류가있음 해결필요
 
+4/9 서버포트 변경 데이터호출방식
+
 1. https://hjycoinfe.tistory.com/5 (Nuxt.js 개념)
 2. https://hjycoinfe.tistory.com/6 (CSR,SSR)
 
