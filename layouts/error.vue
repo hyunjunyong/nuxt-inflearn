@@ -5,6 +5,7 @@
     <h1 v-else>An error occurred</h1>
 
     <NuxtLink to="/">Home page</NuxtLink>
+    <Nuxt />
   </div>
 </template>
 

@@ -1,15 +1,11 @@
 <template>
   <div id="name">
-    <h1>{{ $route.name }} page</h1>
-
-    <NuxtLink to="/">홈페이지</NuxtLink>
-    <NuxtLink to="/main">메인</NuxtLink>
-    <NuxtLink to="/product">상품</NuxtLink>
-    <Nuxt />
+    <p>상품 리스트</p>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "name",
   data() {
