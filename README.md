@@ -24,6 +24,8 @@ layouts 폴더에 오류가있음 해결필요(<Nuxt/> 를 지웠더니 되네?�
 (vue에서 하던 axios방법이 좀다르게 적용되네 기본적으로 사용하던거는 안됨;;;)
 (asyncData는 pages폴더에만 적용되는 속성임)
 
+4/11 상품 목록 표시및 구현, 라우팅 및 스타일링
+
 1. https://hjycoinfe.tistory.com/5 (Nuxt.js 개념)
 2. https://hjycoinfe.tistory.com/6 (CSR,SSR)
 
