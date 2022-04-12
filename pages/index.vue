@@ -7,12 +7,7 @@
         @search="filterItemsBySearchText"
       ></SearchInput> -->
       <ul>
-        <li
-          v-for="item in items"
-          :key="item.id"
-          class="item flex"
-          @click="routeToDetailPage(item.id)"
-        >
+        <li v-for="item in items" :key="item.id" class="item flex">
           <img class="product-image" :src="item.imageUrl" alt="" />
           <p>{{ item.name }}</p>
           <span>{{ item.price }}</span>
@@ -31,13 +26,13 @@ import axios from "axios";
 export default {
   async asyncData() {
     const res = await axios.get("http://localhost:3000/products");
-    const products = res.data.map((item) => {
+    const items = res.data.map((item) => {
       return {
         ...item,
         imageUrl: `${item.imageUrl}?random=${Math.random()}`,
       };
     });
-    return { products };
+    return { items };
   },
   name: "name",
   components: {},

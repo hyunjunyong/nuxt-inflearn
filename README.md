@@ -26,6 +26,8 @@ layouts 폴더에 오류가있음 해결필요(<Nuxt/> 를 지웠더니 되네?�
 
 4/11 상품 목록 표시및 구현, 라우팅 및 스타일링
 
+4/12 영상은 안듣고 이미지 렌더링이 느려(정확한 원인x) 해당원인을 찾는중
+
 1. https://hjycoinfe.tistory.com/5 (Nuxt.js 개념)
 2. https://hjycoinfe.tistory.com/6 (CSR,SSR)
 
