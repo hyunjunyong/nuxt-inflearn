@@ -7,7 +7,12 @@
         @search="filterItemsBySearchText"
       ></SearchInput> -->
       <ul>
-        <li v-for="item in items" :key="item.id" class="item flex">
+        <li
+          v-for="item in items"
+          :key="item.id"
+          class="item flex"
+          @click="moveToDetailPage(item.id)"
+        >
           <img class="product-image" :src="item.imageUrl" alt="" />
           <p>{{ item.name }}</p>
           <span>{{ item.price }}</span>
@@ -25,14 +30,17 @@ import axios from "axios";
 
 export default {
   async asyncData() {
-    const res = await axios.get("http://localhost:3000/products");
-    const items = res.data.map((item) => {
-      return {
+    try {
+      const { data } = await axios.get("http://localhost:3000/products");
+      const items = data.map((item) => ({
         ...item,
         imageUrl: `${item.imageUrl}?random=${Math.random()}`,
-      };
-    });
-    return { items };
+      }));
+      return { items };
+    } catch (error) {
+      const items = [];
+      return { items };
+    }
   },
   name: "name",
   components: {},
@@ -41,7 +49,11 @@ export default {
   },
 
   created() {},
-  methods: {},
+  methods: {
+    moveToDetailPage(id) {
+      this.$router.push(`detail/${id}`);
+    },
+  },
 };
 </script>
 <style scoped>

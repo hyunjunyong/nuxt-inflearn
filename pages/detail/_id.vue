@@ -1,11 +1,6 @@
 <template>
   <div id="name">
-    <header>
-      <h1>
-        <Nuxt-link to="/">Nuxt Shopping</Nuxt-link>
-      </h1>
-    </header>
-    <Nuxt />
+    <h1>상세페이지</h1>
   </div>
 </template>
 
@@ -14,6 +9,9 @@ export default {
   name: "name",
   data() {
     return {};
+  },
+  created() {
+    console.log(this.$route);
   },
   methods: {},
 };
