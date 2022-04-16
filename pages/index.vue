@@ -1,11 +1,10 @@
 <template>
   <div class="app">
     <main>
-      <div><input type="text /" /></div>
-      <!-- <SearchInput
+      <SearchInput
         v-model="inputText"
         @search="filterItemsBySearchText"
-      ></SearchInput> -->
+      ></SearchInput>
       <ul>
         <li
           v-for="item in items"
@@ -27,7 +26,7 @@
 </template>
 <script>
 import axios from "axios";
-
+import SearchInput from "@/components/SearchInput.vue";
 export default {
   async asyncData() {
     try {
@@ -43,7 +42,7 @@ export default {
     }
   },
   name: "name",
-  components: {},
+  components: { SearchInput },
   data() {
     return {};
   },
