@@ -1,17 +1,19 @@
 <template>
   <div id="name">
-    <header>
+    <div>
       <h1>
         <Nuxt-link to="/">Nuxt Shopping</Nuxt-link>
       </h1>
-    </header>
-    <Nuxt />
+
+      <Nuxt />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "name",
+
   data() {
     return {};
   },
