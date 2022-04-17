@@ -10,27 +10,34 @@
           v-for="item in items"
           :key="item.id"
           class="item flex"
-          @click="moveToDetailPage(item.id)"
+          @click="routeToDetailPage(item.id)"
         >
           <img class="product-image" :src="item.imageUrl" alt="" />
           <p>{{ item.name }}</p>
           <span>{{ item.price }}</span>
         </li>
       </ul>
-      <!-- <router-view></router-view>에 효과와 같음 url을 이동할떄마다 nuxt태그 있는 페이지가 다시그려짐-->
-      <!-- <div class="cart-wrapper">
+      <div class="cart-wrapper">
         <button class="btn" @click="routeToCartPage">장바구니 바로가기</button>
-      </div> -->
+      </div>
     </main>
   </div>
+  <!-- <router-view></router-view>에 효과와 같음 url을 이동할떄마다 nuxt태그 있는 페이지가 다시그려짐-->
+  <!-- <div class="cart-wrapper">
+        <button class="btn" @click="routeToCartPage">장바구니 바로가기</button>
+      </div> -->
 </template>
+
 <script>
-import axios from "axios";
+// import axios from 'axios'
 import SearchInput from "@/components/SearchInput.vue";
+import { fetchProducts, fetchProductsByKeyword } from "@/api/index";
+// import { debounce } from 'lodash'
 export default {
+  components: { SearchInput },
   async asyncData() {
     try {
-      const { data } = await axios.get("http://localhost:3000/products");
+      const { data } = await fetchProducts();
       const items = data.map((item) => ({
         ...item,
         imageUrl: `${item.imageUrl}?random=${Math.random()}`,
@@ -41,20 +48,29 @@ export default {
       return { items };
     }
   },
-  name: "name",
-  components: { SearchInput },
   data() {
-    return {};
+    return {
+      inputText: "",
+    };
   },
-
-  created() {},
   methods: {
-    moveToDetailPage(id) {
-      this.$router.push(`detail/${id}`);
+    async filterItemsBySearchText() {
+      const { data } = await fetchProductsByKeyword(this.inputText);
+      this.items = data.map((item) => ({
+        ...item,
+        imageUrl: `${item.imageUrl}?random=${Math.random()}`,
+      }));
+    },
+    routeToDetailPage(id) {
+      this.$router.push(`/product/${id}`);
+    },
+    routeToCartPage() {
+      this.$router.push("/cart");
     },
   },
 };
 </script>
+
 <style scoped>
 .flex {
   display: flex;
