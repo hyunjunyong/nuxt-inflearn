@@ -38,6 +38,8 @@ layouts 폴더에 오류가있음 해결필요(<Nuxt/> 를 지웠더니 되네?�
 
 4/17 쇼핑삼풍 ui 마무리,nuxt/vuex 시작
 
+4/18 vuex 마무리
+
 1. https://hjycoinfe.tistory.com/5 (Nuxt.js 개념)
 2. https://hjycoinfe.tistory.com/6 (CSR,SSR)
 
