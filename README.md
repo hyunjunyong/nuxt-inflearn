@@ -40,6 +40,8 @@ layouts 폴더에 오류가있음 해결필요(<Nuxt/> 를 지웠더니 되네?�
 
 4/18 vuex 마무리
 
+4/19 vuex 추가 공부
+
 1. https://hjycoinfe.tistory.com/5 (Nuxt.js 개념)
 2. https://hjycoinfe.tistory.com/6 (CSR,SSR)
 
