@@ -42,6 +42,8 @@ layouts 폴더에 오류가있음 해결필요(<Nuxt/> 를 지웠더니 되네?�
 
 4/19 vuex 추가 공부
 
+4/20 장바구니 추가,조회 api 연동 ,nuxtserverInit
+
 1. https://hjycoinfe.tistory.com/5 (Nuxt.js 개념)
 2. https://hjycoinfe.tistory.com/6 (CSR,SSR)
 
