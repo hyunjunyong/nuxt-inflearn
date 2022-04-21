@@ -1,7 +1,12 @@
+const isProduction = process.env.NODE_ENV === "production";
+
 export default {
+  // Target: https://go.nuxtjs.dev/config-target
+  // target: 'static',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "nuxtInflearn",
+    title: "learn-nuxt",
     htmlAttrs: {
       lang: "en",
     },
@@ -9,7 +14,6 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
@@ -24,15 +28,26 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: [
+    // https://go.nuxtjs.dev/eslint
+    "@nuxtjs/eslint-module",
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  //server
+
+  // server
   server: {
-    port: 8080,
+    port: isProduction ? null : 4000,
+  },
+
+  // env
+  env: {
+    baseURL: isProduction
+      ? "https://my-json-server.typicode.com/joshua1988/nuxt-shopping-api"
+      : "http://localhost:3000",
   },
 };

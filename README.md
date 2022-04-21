@@ -44,6 +44,8 @@ layouts 폴더에 오류가있음 해결필요(<Nuxt/> 를 지웠더니 되네?�
 
 4/20 장바구니 추가,조회 api 연동 ,nuxtserverInit
 
+4/21 nuxt 서버 배포방식
+
 1. https://hjycoinfe.tistory.com/5 (Nuxt.js 개념)
 2. https://hjycoinfe.tistory.com/6 (CSR,SSR)
 
